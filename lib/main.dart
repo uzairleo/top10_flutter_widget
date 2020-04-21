@@ -56,12 +56,16 @@ class _AppBodyState extends State<AppBody> {
 
   // AppBarTheme(color: Colors.orangeAccent,
   // brightness: themefunc(switchValue));
-
-    Future.delayed(Duration(seconds: 5), () {
-      setState(() {
+    Future.delayed(Duration(seconds: 2),
+    (){
+     setState(() {
         radius3 = 65;
         radius2 = 60;
+        
       });
+    });
+    Future.delayed(Duration(seconds: 5), () {
+      
        Navigator.push(
        context,
        MaterialPageRoute(
@@ -116,23 +120,26 @@ class _AppBodyState extends State<AppBody> {
                     text: "TOP10",
                     style: TextStyle(
                       color: Colors.teal,
-                      fontSize: 24.0,
+                      fontSize: 29.0,
+                      fontFamily: 'digital-7',
                       fontWeight: FontWeight.bold,
                     ),
                     children: [
                       TextSpan(
                         text: "Flutter",
                         style: TextStyle(
+                          fontFamily: 'digital-7',
                           color: Colors.blueAccent,
-                          fontSize: 24.0,
+                          fontSize: 29.0,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       TextSpan(
                         text: "Widgets",
                         style: TextStyle(
+                          fontFamily: 'digital-7',
                           color: Colors.purple,
-                          fontSize: 22.0,
+                          fontSize: 29.0,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

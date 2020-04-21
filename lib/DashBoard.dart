@@ -18,6 +18,7 @@ class _DashBoardState extends State<DashBoard> {
         text: "TOP10",
         style: TextStyle(
           // color: Colors.teal,
+          fontFamily: 'digital-7',
           fontSize: 24.0,
           fontWeight: FontWeight.bold,
         ),
@@ -27,6 +28,7 @@ class _DashBoardState extends State<DashBoard> {
             style: TextStyle(
               // color: Colors.blueAccent,
               fontSize: 24.0,
+              fontFamily: 'digital-7',
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -35,6 +37,7 @@ class _DashBoardState extends State<DashBoard> {
             style: TextStyle(
               // color: Colors.purple,
               fontSize: 22.0,
+              fontFamily: 'digital-7',
               fontWeight: FontWeight.bold,
             ),
           )
