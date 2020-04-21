@@ -17,7 +17,7 @@ class _DashBoardState extends State<DashBoard> {
     text: TextSpan(
         text: "TOP10",
         style: TextStyle(
-          color: Colors.teal,
+          // color: Colors.teal,
           fontSize: 24.0,
           fontWeight: FontWeight.bold,
         ),
@@ -25,7 +25,7 @@ class _DashBoardState extends State<DashBoard> {
           TextSpan(
             text: "Flutter",
             style: TextStyle(
-              color: Colors.blueAccent,
+              // color: Colors.blueAccent,
               fontSize: 24.0,
               fontWeight: FontWeight.bold,
             ),
@@ -33,7 +33,7 @@ class _DashBoardState extends State<DashBoard> {
           TextSpan(
             text: "Widgets",
             style: TextStyle(
-              color: Colors.purple,
+              // color: Colors.purple,
               fontSize: 22.0,
               fontWeight: FontWeight.bold,
             ),
@@ -52,7 +52,7 @@ class _DashBoardState extends State<DashBoard> {
 
       iconPosition: BackdropIconPosition.leading,
       title: _title,
-
+        // colo
       frontLayer: Home(),
       backLayer:BackHome(themefunc:this.themefunc),
     );

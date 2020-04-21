@@ -14,22 +14,14 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // Color appBarTheme = Colors.orangeAccent;
-  // Brightness myBrightness = Brightness.dark;
-// themeChanger(){
-
-//   setState(() {
-//     (switchValue==true)
-//     ?themeValue=ThemeData.dark()
-//     :themeValue=ThemeData.light();
-//   });
-// }
+  
 themvalues(var switchValue){
-  var theme=ThemeData.dark();
+  var theme;
   setState(() {
     (switchValue==false)
     ?theme=ThemeData.light()
     :theme=ThemeData.dark();
+  
   });
   return theme;
 }
@@ -39,7 +31,8 @@ themvalues(var switchValue){
       debugShowCheckedModeBanner: false,
       title: "Top10Widgets",
       home:AppBody(themefunc: themvalues,),
-      theme:themvalues(switchValue),
+      theme:
+      themvalues(switchValue),
      );
   }
 }
@@ -60,6 +53,9 @@ class _AppBodyState extends State<AppBody> {
   @override
   void initState() {
     super.initState();
+
+  // AppBarTheme(color: Colors.orangeAccent,
+  // brightness: themefunc(switchValue));
 
     Future.delayed(Duration(seconds: 5), () {
       setState(() {
