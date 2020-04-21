@@ -9,6 +9,33 @@ class DashBoard extends StatefulWidget {
 }
 
 class _DashBoardState extends State<DashBoard> {
+  var _title = RichText(
+    text: TextSpan(
+        text: "TOP10",
+        style: TextStyle(
+          color: Colors.teal,
+          fontSize: 24.0,
+          fontWeight: FontWeight.bold,
+        ),
+        children: [
+          TextSpan(
+            text: "Flutter",
+            style: TextStyle(
+              color: Colors.blueAccent,
+              fontSize: 24.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          TextSpan(
+            text: "Widgets",
+            style: TextStyle(
+              color: Colors.purple,
+              fontSize: 22.0,
+              fontWeight: FontWeight.bold,
+            ),
+          )
+        ]),
+  );
   @override
   Widget build(BuildContext context) {
     return BackdropScaffold(
@@ -20,35 +47,10 @@ class _DashBoardState extends State<DashBoard> {
       headerHeight: 50.0,
 
       iconPosition: BackdropIconPosition.leading,
-      title: RichText(
-        text: TextSpan(
-            text: "TOP10",
-            style: TextStyle(
-              color: Colors.teal,
-              fontSize: 24.0,
-              fontWeight: FontWeight.bold,
-            ),
-            children: [
-              TextSpan(
-                text: "Flutter",
-                style: TextStyle(
-                  color: Colors.blueAccent,
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              TextSpan(
-                text: "Widgets",
-                style: TextStyle(
-                  color: Colors.purple,
-                  fontSize: 22.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              )
-            ]),
-      ),
+      title: _title,
+
       frontLayer: Home(),
-      backLayer: BackHome(),
+      backLayer:BackHome(),
     );
   }
 }

@@ -24,12 +24,7 @@ class _MyAppState extends State<MyApp> {
       home:
           // Text("leo")
           AppBody(),
-      theme: ThemeData(
-          primaryColor: appBarTheme,
-          brightness: darkThemeEnabled ? Brightness.dark : Brightness.light,
-          // accentColor: Colors.orangeAccent,
-          appBarTheme: AppBarTheme(color: appBarTheme)),
-    );
+     );
   }
 }
 
