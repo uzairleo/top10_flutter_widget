@@ -28,7 +28,7 @@ dependencies:
   font_awesome_flutter: any
   flutter_spinkit: any
   url_launcher: any
-  http: any
+  http: any 
 dev_dependencies:
   flutter_test:
     sdk: flutter
