@@ -1,6 +1,11 @@
 # top10_flutter_widgets
 
-A new Flutter project.
+This is a top10flutter widget app that will help to show the top 10 widgets of flutter that are really helpful while learning and practicing flutter 
+
+
+
+
+![](top10flutterwid.gif)
 
 ## Getting Started
 
