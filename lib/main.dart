@@ -6,35 +6,54 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 void main() {
   runApp(new MyApp());
 }
-bool darkThemeEnabled = false;
-
+bool switchValue=false;
+ThemeData themeValue=ThemeData.dark();
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-  Color appBarTheme = Colors.orangeAccent;
-  Brightness myBrightness = Brightness.dark;
+  // Color appBarTheme = Colors.orangeAccent;
+  // Brightness myBrightness = Brightness.dark;
+// themeChanger(){
+
+//   setState(() {
+//     (switchValue==true)
+//     ?themeValue=ThemeData.dark()
+//     :themeValue=ThemeData.light();
+//   });
+// }
+themvalues(var switchValue){
+  var theme=ThemeData.dark();
+  setState(() {
+    (switchValue==false)
+    ?theme=ThemeData.light()
+    :theme=ThemeData.dark();
+  });
+  return theme;
+}
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Top10Widgets",
-      home:
-          // Text("leo")
-          AppBody(),
+      home:AppBody(themefunc: themvalues,),
+      theme:themvalues(switchValue),
      );
   }
 }
 
 class AppBody extends StatefulWidget {
-  // AppBody();
+  var themefunc;
+  AppBody({this.themefunc});
   @override
-  _AppBodyState createState() => _AppBodyState();
+  _AppBodyState createState() => _AppBodyState(themefunc);
 }
 
 class _AppBodyState extends State<AppBody> {
+  var themefunc;
+  _AppBodyState(this.themefunc);
   double radius1 = 70;
   double radius2 = 50;
   double radius3 = 35;
@@ -50,7 +69,7 @@ class _AppBodyState extends State<AppBody> {
        Navigator.push(
        context,
        MaterialPageRoute(
-         builder: (context)=>(DashBoard())
+         builder: (context)=>(DashBoard(themefunc:this.themefunc))
        ));
     });
   }
@@ -73,7 +92,7 @@ class _AppBodyState extends State<AppBody> {
                 onTap: () {
                   setState(() {
                      Navigator.push(context, MaterialPageRoute(
-                      builder: (context)=> (DashBoard())
+                      builder: (context)=> (DashBoard(themefunc:this.themefunc))
                      ));
                   });
                 },

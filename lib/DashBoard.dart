@@ -4,11 +4,15 @@ import 'package:top10flutterwid/BackHome.dart';
 import 'package:top10flutterwid/Home.dart';
 
 class DashBoard extends StatefulWidget {
+  var themefunc;
+  DashBoard({this.themefunc});
   @override
-  _DashBoardState createState() => _DashBoardState();
+  _DashBoardState createState() => _DashBoardState(themefunc);
 }
 
 class _DashBoardState extends State<DashBoard> {
+  var themefunc;
+  _DashBoardState(this.themefunc);
   var _title = RichText(
     text: TextSpan(
         text: "TOP10",
@@ -50,7 +54,7 @@ class _DashBoardState extends State<DashBoard> {
       title: _title,
 
       frontLayer: Home(),
-      backLayer:BackHome(),
+      backLayer:BackHome(themefunc:this.themefunc),
     );
   }
 }

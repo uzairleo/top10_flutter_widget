@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:top10flutterwid/main.dart';
 // import 'package:top10flutterwid/main.dart';
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BackHome extends StatefulWidget {
+  var themefunc;
+  BackHome({this.themefunc});
   @override
-  _BackHomeState createState() => _BackHomeState();
+  _BackHomeState createState() => _BackHomeState(themefunc);
 }
 
 class _BackHomeState extends State<BackHome> {
-  _BackHomeState();
+  var themefunc;
+  _BackHomeState(this.themefunc);
   bool _darktheme = true;
   TextStyle _textstyle = TextStyle(
     color: Colors.black87,
@@ -79,13 +83,11 @@ class _BackHomeState extends State<BackHome> {
       ]),
     );
   }
-
   Widget _backlayer() {
     return Center(
       child: Container(
-       color: Colors.orangeAccent,
+      //  color: Colors.orangeAccent,
         child: Column(
-            // mainAxisAlignment:MainAxisAlignment.start,
             children: <Widget>[
               _discriptionSection(),
               Divider(
@@ -97,9 +99,14 @@ class _BackHomeState extends State<BackHome> {
                 subtitle: Text("Change theme "),
                 // onTap: (){},
                 trailing: Switch(
-                  value: _darktheme,
+                  value: switchValue,
                   onChanged: (bool value) {
-                    darkThemeButton(value);
+                    // darkThemeButton(value);
+                  setState(() {
+                  switchValue=value;
+                  
+                    themefunc(switchValue);
+                  });
                   },
                   activeColor: Colors.black45,
                   activeTrackColor: Colors.black45,
