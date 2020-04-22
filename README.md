@@ -1,11 +1,18 @@
 # top10_flutter_widgets
+## helloGuys
+I make this application to help newbies and those who are flutter aspirants. This app contain all those important and top 10 flutter widget. which is almost part of all flutter projects. So if u wanna to test its responsive ui. Click on the link to download the release version and checkout the recipe;
 
-This is a top10flutter widget app that will help to show the top 10 widgets of flutter that are really helpful while learning and practicing flutter 
+## Link
+[Download this app](https://drive.google.com/open?id=1PQdS8veQumWSyj1RKighFvr3rVt_TYOU)
+
+
+## showcase
+
+![](top10flutter.gif)
 
 
 
 
-![](top10flutterwid.gif)
 
 ## Getting Started
 
