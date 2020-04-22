@@ -77,7 +77,7 @@ class _HomeState extends State<Home> {
                       tag: widgetName,
                       child: CircleAvatar(
                           child: Image.asset(
-                        ('images/bullets/$bullets/.png'),
+                        ('images/1.png'),
                       )),
                     ),
                   ),
@@ -122,7 +122,7 @@ class _HomeState extends State<Home> {
                       key: _hKey,
                       tag: tag,
                       child: Image.asset(
-                        ('images/bullets/$bullets/.png'),
+                        ('images/1.png'),
                       ),
                     ),
                   ),
