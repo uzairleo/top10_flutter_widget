@@ -22,27 +22,8 @@ _DetailScreenState(this.widgetTitle,this.appbarColor);//constructor
   @override
   Widget build(BuildContext context) {
       return _eachpageDetail();
-    // Scaffold(
-    //   appBar: AppBar(
-    //     title:Text(widgetTitle),
-    //     centerTitle: true,
-    //     backgroundColor: appbarColor,
-    //   ),
-    //   body: _eachpageDetail(),
-      
-    // );
     
   }
-//    void  _heroNavigateToLeo(BuildContext context){
-//  Navigator.push(context, MaterialPageRoute(
-//    builder: (context)=>(Scaffold(
-//      body: Center(child: Hero(
-//        tag: "uzair_leo",
-//        child: Image.asset('images/circle-cropped.png'),
-//      ),),
-//    ))
-//  ));
-//   }
   _eachpageDetail()
   {
           if(widgetTitle=="SafeArea")
