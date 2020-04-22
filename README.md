@@ -8,7 +8,7 @@ I make this application to help newbies and those who are flutter aspirants. Thi
 
 ## showcase
 
-![](images/top10flutter.gif)
+![](images/top10flutter2.gif)
 
 
 
