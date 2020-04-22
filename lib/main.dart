@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
 }
 
 class AppBody extends StatefulWidget {
-  var themefunc;
+  final themefunc;
   AppBody({this.themefunc});
   @override
   _AppBodyState createState() => _AppBodyState(themefunc);

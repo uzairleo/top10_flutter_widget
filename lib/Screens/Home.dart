@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
                   SizedBox(width: 20.0),
                   GestureDetector(
                     onTap: () {
-                      _navigateto(context, widgetName, bullets);
+                      _navigatetoHero(context, widgetName, bullets);
                     },
                     child: Hero(
                       key: _hKey,
@@ -105,14 +105,14 @@ class _HomeState extends State<Home> {
     );
   }
 
-  void _navigateto(BuildContext context, String tag, String bullets) {
+  void _navigatetoHero(BuildContext context, String tag, String bullets) {
     Navigator.push(
         context,
         MaterialPageRoute(
-            builder: (context) => (Scaffold(
-                    body: GestureDetector(
+            builder: (context) => GestureDetector(
                   onTap: () => Navigator.of(context).pop(),
-                  child: Center(
+                  child: (Scaffold(
+                      body: Center(
                     child: Hero(
                       key: _hKey,
                       tag: tag,
@@ -120,7 +120,7 @@ class _HomeState extends State<Home> {
                         ('images/bullets/$bullets.png'),
                       ),
                     ),
-                  ),
-                )))));
+                  ))),
+                )));
   }
 }

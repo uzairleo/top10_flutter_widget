@@ -1044,8 +1044,10 @@ class HeroWidget extends StatelessWidget {
           )
         ],
       ),
-      body: WillPopScope(
-        child: GestureDetector(
+      body:
+      //  WillPopScope(
+        // child:
+         GestureDetector(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               mainAxisSize: MainAxisSize.max,
@@ -1068,7 +1070,8 @@ class HeroWidget extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   children: <Widget>[
                     Hero(
-                      tag: "hero",
+                      key: Key('herowidget'),
+                      tag: "herowidget",
                       child: Container(
                         width: 100,
                         height: 100,
@@ -1105,14 +1108,14 @@ class HeroWidget extends StatelessWidget {
               Navigator.push(context, MaterialPageRoute(
                   builder: (context)=>(Hero2Widget())
               ));
-              timeDilation = 4.0;
+              timeDilation = 2.0;
             }),
-        onWillPop: () {
-          ///Reset timeDilation since it is a Global property
-          timeDilation = 1.0;
-          Navigator.of(context).pop(true);
-        },
-      ),
+        // onWillPop: () {
+          // /Reset timeDilation since it is a Global property
+          // timeDilation = 1.0;
+          // Navigator.of(context).pop(true);
+        // },
+      // ),
     );
   }
 
@@ -1136,13 +1139,16 @@ class Hero2Widget extends StatelessWidget {
           margin: EdgeInsets.only(right: 48),
         ),
       ),
-      body: WillPopScope(
-        child: Row(
+      body:
+      //  WillPopScope(
+        // child:
+         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
             Hero(
-              tag: "hero",
+              tag: "herowidget",
+              key:Key('herowidget'),
               child: Container(
                 width: 200,
                 height: 200,
@@ -1173,11 +1179,11 @@ class Hero2Widget extends StatelessWidget {
             ),
           ],
         ),
-        onWillPop: () {
-          timeDilation = 4.0;
-          Navigator.of(context).pop(true);
-        },
-      ),
+        // onWillPop: () {
+        //   timeDilation = 4.0;
+        //   Navigator.of(context).pop(true);
+        // },
+      // ),
     );
   }
 }
