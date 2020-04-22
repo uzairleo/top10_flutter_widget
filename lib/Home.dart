@@ -37,7 +37,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  _customListTile(Color widgetColor, Color splashColor, String widgetName,var bullets) {
+  _customListTile(Color widgetColor, Color splashColor, String widgetName,String bullets) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       // crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -77,7 +77,7 @@ class _HomeState extends State<Home> {
                       tag: widgetName,
                       child: CircleAvatar(
                           child: Image.asset(
-                        ('images/bullets/2.png'),
+                        ('images/bullets/$bullets.png'),
                       )),
                     ),
                   ),
@@ -110,7 +110,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  void _navigateto(BuildContext context, String tag,[var bullets]) {
+  void _navigateto(BuildContext context, String tag,String bullets) {
     Navigator.push(
         context,
         MaterialPageRoute(
@@ -122,7 +122,7 @@ class _HomeState extends State<Home> {
                       key: _hKey,
                       tag: tag,
                       child: Image.asset(
-                        ('images/bullets/2.png'),
+                        ('images/bullets/$bullets.png'),
                       ),
                     ),
                   ),
