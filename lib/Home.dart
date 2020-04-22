@@ -22,22 +22,22 @@ class _HomeState extends State<Home> {
         shrinkWrap: true,
         // addSemanticIndexes: true,
         children: <Widget>[
-          _customListTile(Colors.blue, Colors.blueAccent, "SafeArea"),
-          _customListTile(Colors.deepOrange, Colors.deepOrangeAccent, "Wrap"),
-          _customListTile(Colors.purple, Colors.purpleAccent, "RichText"),
-          _customListTile(Colors.red, Colors.redAccent, "ClipRect"),
-          _customListTile(Colors.brown, Colors.amberAccent, "MediaQuery"),
-          _customListTile(Colors.green, Colors.greenAccent, "FutureBuilder"),
-          _customListTile(Colors.teal, Colors.tealAccent, "Flexible"),
-          _customListTile(Colors.blue, Colors.blueAccent, "SizedBox"),
-          _customListTile(Colors.amber, Colors.amberAccent, "Hero"),
-          _customListTile(Colors.red, Colors.blueAccent, "SpinkitLoaders")
+          _customListTile(Colors.blue, Colors.blueAccent, "SafeArea","1"),
+          _customListTile(Colors.deepOrange, Colors.deepOrangeAccent, "Wrap","2"),
+          _customListTile(Colors.purple, Colors.purpleAccent, "RichText","3"),
+          _customListTile(Colors.red, Colors.redAccent, "ClipRect","4"),
+          _customListTile(Colors.brown, Colors.amberAccent, "MediaQuery","5"),
+          _customListTile(Colors.green, Colors.greenAccent, "FutureBuilder","6"),
+          _customListTile(Colors.teal, Colors.tealAccent, "Flexible","7"),
+          _customListTile(Colors.blue, Colors.blueAccent, "SizedBox","8"),
+          _customListTile(Colors.amber, Colors.amberAccent, "Hero","9"),
+          _customListTile(Colors.red, Colors.blueAccent, "SpinkitLoaders","10")
         ],
       ),
     );
   }
 
-  _customListTile(Color widgetColor, Color splashColor, String widgetName) {
+  _customListTile(Color widgetColor, Color splashColor, String widgetName,var bullets) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       // crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -70,14 +70,14 @@ class _HomeState extends State<Home> {
                   SizedBox(width: 20.0),
                   GestureDetector(
                     onTap: () {
-                      _navigateto(context, widgetName);
+                      _navigateto(context, widgetName,bullets);
                     },
                     child: Hero(
                       key: _hKey,
                       tag: widgetName,
                       child: CircleAvatar(
                           child: Image.asset(
-                        ('images/circle-cropped.png'),
+                        ('images/bullets/$bullets/.png'),
                       )),
                     ),
                   ),
@@ -110,7 +110,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  void _navigateto(BuildContext context, String tag) {
+  void _navigateto(BuildContext context, String tag,[var bullets]) {
     Navigator.push(
         context,
         MaterialPageRoute(
@@ -122,7 +122,7 @@ class _HomeState extends State<Home> {
                       key: _hKey,
                       tag: tag,
                       child: Image.asset(
-                        ('images/circle-cropped.png'),
+                        ('images/bullets/$bullets/.png'),
                       ),
                     ),
                   ),
