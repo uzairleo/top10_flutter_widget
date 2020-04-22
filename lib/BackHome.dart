@@ -53,7 +53,7 @@ class _BackHomeState extends State<BackHome> {
               children: <Widget>[
                 Text(
                   "Top10Widgets",
-                  style: TextStyle(color: textColor,fontSize: 16),
+                  style: TextStyle(color: textColor,fontSize: 18,fontWeight: FontWeight.bold),
                 ),
                 Text(""),
                 Text(
@@ -101,6 +101,9 @@ class _BackHomeState extends State<BackHome> {
             subtitle: Text("Change theme "),
             // onTap: (){},
             trailing: Switch(
+              inactiveTrackColor: Colors.white70,
+              focusColor: Colors.blueGrey,
+              activeTrackColor: Colors.white,
               value: switchValue,
               onChanged: (bool value) {
                 // darkThemeButton(value);
@@ -112,7 +115,7 @@ class _BackHomeState extends State<BackHome> {
                 });
               },
               activeColor: Colors.black45,
-              activeTrackColor: Colors.black45,
+              // activeTrackColor: Colors.black45,
               inactiveThumbColor: Colors.white54,
             ),
           ),

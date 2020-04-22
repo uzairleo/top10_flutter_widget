@@ -42,7 +42,6 @@ class _HomeState extends State<Home> {
       mainAxisAlignment: MainAxisAlignment.start,
       // crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        
         Card(
           semanticContainer: true,
           elevation: 5.0,
@@ -68,39 +67,37 @@ class _HomeState extends State<Home> {
               child: Row(
                 // mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  SizedBox(width:20.0),
+                  SizedBox(width: 20.0),
                   GestureDetector(
-          onTap: () {
-            _navigateto(context, widgetName);
-          },
-          child: Hero(
-            key: _hKey,
-            tag: widgetName,
-            child: CircleAvatar(
-                child: Image.asset(
-              ('images/circle-cropped.png'),
-            )),
-          ),
-        ),
-                  SizedBox(width:40),
+                    onTap: () {
+                      _navigateto(context, widgetName);
+                    },
+                    child: Hero(
+                      key: _hKey,
+                      tag: widgetName,
+                      child: CircleAvatar(
+                          child: Image.asset(
+                        ('images/circle-cropped.png'),
+                      )),
+                    ),
+                  ),
+                  SizedBox(width: 40),
                   Center(
                     child: RichText(
                       text: TextSpan(
                           text: widgetName,
                           style: TextStyle(
-                            color: widgetColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                            fontFamily: 'Satisfy'
-                          ),
+                              color: widgetColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18,
+                              fontFamily: 'Satisfy'),
                           children: [
                             TextSpan(
                                 text: "    Widget",
                                 style: TextStyle(
-                                  color: Colors.black54,
-                                  fontSize: 16.0,
-                                fontFamily: 'SpicyRice'
-                                ))
+                                    color: Colors.black54,
+                                    fontSize: 16.0,
+                                    fontFamily: 'SpicyRice'))
                           ]),
                     ),
                   )
