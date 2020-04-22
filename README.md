@@ -4,7 +4,7 @@
 I make this application to help newbies and those who are flutter aspirants. This app contain all those important and top 10 flutter widget. which is almost part of all flutter projects. So if u wanna to test its responsive ui. Click on the link to download the release version and checkout the recipe;
 
 
-![](top10flutter.gif)
+![](images/top10flutter.gif)
 
 ## Getting Started
 
