@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:top10flutterwid/Aboutme.dart';
+import 'package:top10flutterwid/Widgets/Aboutme.dart';
 import 'package:top10flutterwid/main.dart';
-// import 'package:top10flutterwid/main.dart';
-// import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-var textColor=Colors.white;
+
+var textColor = Colors.white;
+
 class BackHome extends StatefulWidget {
-var    themefunc;
+  var themefunc;
   BackHome({this.themefunc});
   @override
   _BackHomeState createState() => _BackHomeState(themefunc);
@@ -22,16 +22,15 @@ class _BackHomeState extends State<BackHome> {
 
   _discriptionSection() {
     return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-        SizedBox(height:30),
+      child:
+          Column(mainAxisAlignment: MainAxisAlignment.start, children: <Widget>[
+        SizedBox(height: 30),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             SizedBox(
               width: 50.0,
-              ),
+            ),
             ClipRRect(
               borderRadius: BorderRadius.all(Radius.circular(8.0)),
               child: Container(
@@ -41,7 +40,6 @@ class _BackHomeState extends State<BackHome> {
                 child: Center(
                   child: FlutterLogo(
                     size: 55,
-
                   ),
                 ),
               ),
@@ -53,13 +51,18 @@ class _BackHomeState extends State<BackHome> {
               children: <Widget>[
                 Text(
                   "Top10Widgets",
-                  style: TextStyle(color: textColor,fontSize: 18,fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      color: textColor,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold),
                 ),
                 Text(""),
                 Text(
                   "V 1.0",
-                  style: TextStyle(fontSize: 16,color: textColor,
-                  fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: textColor,
+                      fontWeight: FontWeight.bold),
                 )
               ],
             ),
@@ -74,7 +77,8 @@ class _BackHomeState extends State<BackHome> {
             Text(
               'An app showcasing flutter top10 widgets with\n'
               'side by side source code view.',
-              style:TextStyle(fontSize: 16.0,color: textColor), ),
+              style: TextStyle(fontSize: 16.0, color: textColor),
+            ),
           ],
         ),
         SizedBox(height: 8.0),
@@ -106,16 +110,12 @@ class _BackHomeState extends State<BackHome> {
               activeTrackColor: Colors.white,
               value: switchValue,
               onChanged: (bool value) {
-                // darkThemeButton(value);
                 setState(() {
                   switchValue = value;
-                  // textcolor=Colors.white;
-                  // (switchValue==true)?textcolor=Colors.white:textcolor=Colors.black;
                   themefunc(switchValue);
                 });
               },
               activeColor: Colors.black45,
-              // activeTrackColor: Colors.black45,
               inactiveThumbColor: Colors.white54,
             ),
           ),

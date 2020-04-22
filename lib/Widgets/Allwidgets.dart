@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:top10flutterwid/Demo_Model.dart';
-import 'package:top10flutterwid/api.dart';
+import 'package:top10flutterwid/constants/Demo_Model.dart';
+import 'package:top10flutterwid/Widgets/api.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -13,13 +13,18 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 // }
 class SafeAreaWidget extends StatefulWidget {
+  final  abcolor;
+  SafeAreaWidget(this.abcolor);
       @override
-      _SafeAreaWidgetState createState() => _SafeAreaWidgetState();
+      _SafeAreaWidgetState createState() => _SafeAreaWidgetState(abcolor);
     }
     
     class _SafeAreaWidgetState extends State<SafeAreaWidget> {
+      var abcolor;
+      _SafeAreaWidgetState(this.abcolor);
       ///Bool value to control the behaviour of SafeArea widget.
       bool _isEnabled = true;
+
     
       @override
       Widget build(BuildContext context) {
@@ -68,12 +73,15 @@ class SafeAreaWidget extends StatefulWidget {
       }
     } 
     class WrapWidget extends StatefulWidget {
+    final abarColor;
+        WrapWidget(this.abarColor);
         @override
-        _WrapWidgetState createState() => _WrapWidgetState();
+        _WrapWidgetState createState() => _WrapWidgetState(abarColor);
     }
       
     class _WrapWidgetState extends State<WrapWidget> {
-      
+      var abarColor;
+      _WrapWidgetState(this.abarColor);
         BuildContext context; //global context
       
         @override
@@ -81,6 +89,7 @@ class SafeAreaWidget extends StatefulWidget {
           this.context = context;
           return Scaffold(
             appBar: AppBar(
+              backgroundColor: abarColor,
               title: Container(
                 child: Center(
                   child: Text(
@@ -237,15 +246,20 @@ class SafeAreaWidget extends StatefulWidget {
     );
 
     class RichTextWidget extends StatefulWidget {
+      final abarColor;
+      RichTextWidget(this.abarColor);
   @override
-  _RichTextWidgetState createState() => _RichTextWidgetState();
+  _RichTextWidgetState createState() => _RichTextWidgetState(abarColor);
 }
 
 class _RichTextWidgetState extends State<RichTextWidget> {
+  final abarColor;
+  _RichTextWidgetState(this.abarColor);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: abarColor,
         centerTitle: true,
         title: Text(
           'RichText Widget',
@@ -378,17 +392,21 @@ class _RichTextWidgetState extends State<RichTextWidget> {
 }
 
 class ClipRRectWidget extends StatefulWidget {
+  final abarColor;
+  ClipRRectWidget(this.abarColor);
   @override
-  _ClipRRectWidgetState createState() => _ClipRRectWidgetState();
+  _ClipRRectWidgetState createState() => _ClipRRectWidgetState(abarColor);
 }
 
 class _ClipRRectWidgetState extends State<ClipRRectWidget> {
   var _value = 50.0;
-
+var abarColor;
+_ClipRRectWidgetState(this.abarColor);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: abarColor,
         centerTitle: true,
         title: Text(
               'ClipRRect Widget',
@@ -489,15 +507,20 @@ class _ClipRRectWidgetState extends State<ClipRRectWidget> {
   }
 }
 class MediaQueryWidget extends StatefulWidget {
+  final abarColor;
+  MediaQueryWidget(this.abarColor);
   @override
-  _MediaQueryWidgetState createState() => _MediaQueryWidgetState();
+  _MediaQueryWidgetState createState() => _MediaQueryWidgetState(abarColor);
 }
 
 class _MediaQueryWidgetState extends State<MediaQueryWidget> {
+  var abarColor;
+  _MediaQueryWidgetState(this.abarColor);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: abarColor,
         centerTitle: true,
         title: Text(
           'MediaQuery Widget',
@@ -707,11 +730,15 @@ Widget doubleColumnLayout(BuildContext context) => Row(
   ],
 );
 class FutureBuilderWidget extends StatefulWidget {
+  final abarColor;
+  FutureBuilderWidget(this.abarColor);
   @override
-  _FutureBuilderWidgetState createState() => _FutureBuilderWidgetState();
+  _FutureBuilderWidgetState createState() => _FutureBuilderWidgetState(abarColor);
 }
 
 class _FutureBuilderWidgetState extends State<FutureBuilderWidget> {
+  var abarColor;
+  _FutureBuilderWidgetState(this.abarColor);
   bool _isButtonClicked = false;
   var _buttonIcon = Icons.cloud_download;
   var _buttonText = "Fetch Data";
@@ -721,6 +748,7 @@ class _FutureBuilderWidgetState extends State<FutureBuilderWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: abarColor,
         centerTitle: true,
         title: Text(
           'Future Builder Widget',
@@ -821,12 +849,15 @@ class _FutureBuilderWidgetState extends State<FutureBuilderWidget> {
   }
 }
 class FlexibleWidget extends StatefulWidget {
+  final abarColor;
+  FlexibleWidget(this.abarColor);
   @override
-  _FlexibleWidgetState createState() => _FlexibleWidgetState();
+  _FlexibleWidgetState createState() => _FlexibleWidgetState(abarColor);
 }
 
 class _FlexibleWidgetState extends State<FlexibleWidget> {
-
+var abarColor;
+_FlexibleWidgetState(this.abarColor);
   @override
   void initState() {
     super.initState();
@@ -840,6 +871,7 @@ class _FlexibleWidgetState extends State<FlexibleWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: abarColor,
         centerTitle: true,
         title: Text(
           'Flexible Widget',
@@ -983,10 +1015,13 @@ class _FlexibleWidgetState extends State<FlexibleWidget> {
 
 
 class HeroWidget extends StatelessWidget {
+  final abarColor;
+  HeroWidget(this.abarColor);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: abarColor,
         centerTitle: true,
         title: Text(
               'Hero Widget',
@@ -1147,11 +1182,15 @@ class Hero2Widget extends StatelessWidget {
   }
 }
 class SizedBoxWidget extends StatefulWidget {
+  final abarColor;
+  SizedBoxWidget(this.abarColor);
   @override
-  _SizedBoxWidgetState createState() => _SizedBoxWidgetState();
+  _SizedBoxWidgetState createState() => _SizedBoxWidgetState(abarColor);
 }
 
 class _SizedBoxWidgetState extends State<SizedBoxWidget> {
+  var abarColor;
+  _SizedBoxWidgetState(this.abarColor);
   ///Using a list to control both the dimensions at once
   List<double> _dimentions = [100.0, 100.0];
   List<double> _dimentions1 = [200.0, 200.0];
@@ -1163,6 +1202,7 @@ class _SizedBoxWidgetState extends State<SizedBoxWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: abarColor,
         centerTitle: true,
         title: Text(
           'SizedBox Widget',
@@ -1278,10 +1318,12 @@ Container dividerr(BuildContext context) => Container(
 
 
     class SlpinkitLoaders extends StatelessWidget {
+      final abarColor;
+      SlpinkitLoaders(this.abarColor);
       @override
       Widget build(BuildContext context) {
         return Scaffold(
-          backgroundColor: Colors.grey,
+          backgroundColor: abarColor,
           appBar: AppBar(
             title: Text(
               "Spinkit_Animated\n   Loaders"

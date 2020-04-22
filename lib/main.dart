@@ -1,39 +1,41 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:top10flutterwid/DashBoard.dart';
+import 'package:top10flutterwid/Screens/DashBoard.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 void main() {
   runApp(new MyApp());
 }
-bool switchValue=false;
-ThemeData themeValue=ThemeData.dark();
+
+bool switchValue = false;
+ThemeData themeValue = ThemeData.dark();
+
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-  
-themvalues(var switchValue){
-  var theme;
-  setState(() {
-    (switchValue==false)
-    ?theme=ThemeData.light()
-    :theme=ThemeData.dark();
-  
-  });
-  return theme;
-}
+  themvalues(var switchValue) {
+    var theme;
+    setState(() {
+      (switchValue == false)
+          ? theme = ThemeData.light()
+          : theme = ThemeData.dark();
+    });
+    return theme;
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Top10Widgets",
-      home:AppBody(themefunc: themvalues,),
-      theme:
-      themvalues(switchValue),
-     );
+      home: AppBody(
+        themefunc: themvalues,
+      ),
+      theme: themvalues(switchValue),
+    );
   }
 }
 
@@ -54,23 +56,17 @@ class _AppBodyState extends State<AppBody> {
   void initState() {
     super.initState();
 
-  // AppBarTheme(color: Colors.orangeAccent,
-  // brightness: themefunc(switchValue));
-    Future.delayed(Duration(seconds: 2),
-    (){
-     setState(() {
+    Future.delayed(Duration(seconds: 2), () {
+      setState(() {
         radius3 = 65;
         radius2 = 60;
-        
       });
     });
     Future.delayed(Duration(seconds: 5), () {
-      
-       Navigator.push(
-       context,
-       MaterialPageRoute(
-         builder: (context)=>(DashBoard(themefunc:this.themefunc))
-       ));
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => (DashBoard(themefunc: this.themefunc))));
     });
   }
 
@@ -91,9 +87,11 @@ class _AppBodyState extends State<AppBody> {
               child: GestureDetector(
                 onTap: () {
                   setState(() {
-                     Navigator.push(context, MaterialPageRoute(
-                      builder: (context)=> (DashBoard(themefunc:this.themefunc))
-                     ));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                (DashBoard(themefunc: this.themefunc))));
                   });
                 },
                 child: CircleAvatar(

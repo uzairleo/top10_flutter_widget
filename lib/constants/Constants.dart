@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:top10flutterwid/CodeString.dart';
+import 'package:top10flutterwid/constants/CodeString.dart';
 
 class Constants{
 static Widget safeArea(){

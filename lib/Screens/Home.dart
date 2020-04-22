@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:top10flutterwid/DetailScreens.dart';
+import 'package:top10flutterwid/Screens/DetailScreens.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -22,41 +22,37 @@ class _HomeState extends State<Home> {
         shrinkWrap: true,
         // addSemanticIndexes: true,
         children: <Widget>[
-          _customListTile(Colors.blue, Colors.blueAccent, "SafeArea","1"),
-          _customListTile(Colors.deepOrange, Colors.deepOrangeAccent, "Wrap","2"),
-          _customListTile(Colors.purple, Colors.purpleAccent, "RichText","3"),
-          _customListTile(Colors.red, Colors.redAccent, "ClipRect","4"),
-          _customListTile(Colors.brown, Colors.amberAccent, "MediaQuery","5"),
-          _customListTile(Colors.green, Colors.greenAccent, "FutureBuilder","6"),
-          _customListTile(Colors.teal, Colors.tealAccent, "Flexible","7"),
-          _customListTile(Colors.blue, Colors.blueAccent, "SizedBox","8"),
-          _customListTile(Colors.amber, Colors.amberAccent, "Hero","9"),
-          _customListTile(Colors.red, Colors.blueAccent, "SpinkitLoaders","10")
+          _customListTile(Colors.blue, Colors.blueAccent, "SafeArea", "1"),
+          _customListTile(
+              Colors.deepOrange, Colors.deepOrangeAccent, "Wrap", "2"),
+          _customListTile(Colors.purple, Colors.purpleAccent, "RichText", "3"),
+          _customListTile(Colors.red, Colors.redAccent, "ClipRect", "4"),
+          _customListTile(Colors.brown, Colors.amberAccent, "MediaQuery", "5"),
+          _customListTile(
+              Colors.green, Colors.greenAccent, "FutureBuilder", "6"),
+          _customListTile(Colors.teal, Colors.tealAccent, "Flexible", "7"),
+          _customListTile(Colors.blue, Colors.blueAccent, "SizedBox", "8"),
+          _customListTile(Colors.amber, Colors.amberAccent, "Hero", "9"),
+          _customListTile(Colors.red, Colors.blueAccent, "SpinkitLoaders", "10")
         ],
       ),
     );
   }
 
-  _customListTile(Color widgetColor, Color splashColor, String widgetName,String bullets) {
+  _customListTile(
+      Color widgetColor, Color splashColor, String widgetName, String bullets) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
-      // crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         Card(
           semanticContainer: true,
           elevation: 5.0,
-          // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
-          // clipBehavior: Clip.antiAlias,
           borderOnForeground: true,
-
           child: Container(
-            // color: Colors.white,
-            // margin:EdgeInsets.all(100.0),
             height: 60.0,
             width: 340,
             child: InkWell(
               splashColor: splashColor,
-              // highlightColor: Colors.orange,
               onTap: () {
                 Navigator.push(
                     context,
@@ -65,12 +61,11 @@ class _HomeState extends State<Home> {
                             (DetailScreen(widgetName, widgetColor))));
               },
               child: Row(
-                // mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(width: 20.0),
                   GestureDetector(
                     onTap: () {
-                      _navigateto(context, widgetName,bullets);
+                      _navigateto(context, widgetName, bullets);
                     },
                     child: Hero(
                       key: _hKey,
@@ -110,7 +105,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  void _navigateto(BuildContext context, String tag,String bullets) {
+  void _navigateto(BuildContext context, String tag, String bullets) {
     Navigator.push(
         context,
         MaterialPageRoute(

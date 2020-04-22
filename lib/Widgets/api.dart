@@ -1,4 +1,4 @@
-import 'package:top10flutterwid/Demo_Model.dart';
+import 'package:top10flutterwid/constants/Demo_Model.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 
