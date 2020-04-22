@@ -778,6 +778,7 @@ class _FutureBuilderWidgetState extends State<FutureBuilderWidget> {
           ///on a button click.
           future: _isButtonClicked ? getDemoResponse() : null,
           builder: (context, snapshot) {
+            
             switch (snapshot.connectionState) {
 
               ///when the future is null

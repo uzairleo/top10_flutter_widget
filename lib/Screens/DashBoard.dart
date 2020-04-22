@@ -6,7 +6,7 @@ import 'package:top10flutterwid/Screens/BackHome.dart';
 import 'package:top10flutterwid/Screens/Home.dart';
 
 class DashBoard extends StatefulWidget {
-  var themefunc;
+  final themefunc;
   DashBoard({this.themefunc});
   @override
   _DashBoardState createState() => _DashBoardState(themefunc);
