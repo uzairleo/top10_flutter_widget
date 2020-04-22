@@ -5,7 +5,7 @@ import 'package:top10flutterwid/main.dart';
 var textColor = Colors.white;
 
 class BackHome extends StatefulWidget {
-  var themefunc;
+  final themefunc;
   BackHome({this.themefunc});
   @override
   _BackHomeState createState() => _BackHomeState(themefunc);
